@@ -1,0 +1,13 @@
+<div class="small-6 small-offset-3 columns">
+  <div class="callout primary">
+    <h3>Events in <%= @city_events.location.city %> on <%=@city_events.date %> </h3>
+
+        <ul>
+          <% @city_events.data['events'].each do |event| %>
+          <li>
+            <a href="<%= event['performers'].first['url']%>"><%= event['performers'].first['name'] %></a> @ <%= event['venue']['name'] %>
+          </li>
+          <% end %>
+        </ul>
+  </div>
+</div>

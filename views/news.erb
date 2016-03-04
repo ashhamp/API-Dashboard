@@ -1,0 +1,13 @@
+<div class="small-6 small-offset-3 columns">
+  <div class="callout primary">
+    <h3>Top Headlines:</h3>
+
+    <ul>
+      <% @news.data['results'].each do |article| %>
+        <li>
+          <a href="<%= article['url']%>" target="_blank"> <%= article['title'] %></a>
+        </li>
+        <% end %>
+    </ul>
+  </div>
+</div>
